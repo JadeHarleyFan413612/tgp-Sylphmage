@@ -38,36 +38,7 @@ namespace SylphMage
             novastyle.richText = true;
             GUI.Label(new Rect(150, 50, 300, 500), "<size=24><color=#0f0><b>One or more mods have been added :3c \n close tgp to apply the change</b></color></size>", novastyle);
         }
-        //private static void CopyFilesRecursively(string sourcePath, string targetPath)
-        //{
-        //    //Now Create all of the directories
-        //    foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
-        //    {
-        //        Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
-        //    }
-        //
-        //    //Copy all the files & Replaces any files with the same name
-        //    foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
-        //    {
-        //        Melon<mod>.Logger.Msg(newPath.Remove(0,46));
-        //        var filename = newPath.Remove(0, 46);
-        //        try
-        //        {
-        //
-        //            
-        //            File.Copy(newPath, newPath.Replace(sourcePath, targetPath),true);
-        //            Melon<mod>.Logger.Msg("filename: " + filename);
-        //            if (filename == "SylphMage.dll")
-        //            {
-        //                File.Copy(sourcePath+"/SylphMage.dll", "./Mods/TMPSylphMage.dll");
-        //            }
-        //
-        //        } catch
-        //        {
-        //            Melon<mod>.Logger.Msg("but it was already here");
-        //        }
-        //    }
-        //}
+
         public override void OnLateInitializeMelon()
         {
             if (File.Exists("./Mods/TMPSylphMage.dll"))
@@ -80,10 +51,7 @@ namespace SylphMage
                 File.Delete("./Mods/TMPCheck");
 
             }
-            // void MainUpdateAlert()
-            //{
-            //    GUI.Box(new Rect(0, 0, 300, 500), "My Menu");
-            //}
+
 
             string[] getFolders(string location)
             {
