@@ -11,12 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using UnityEngine;
-
 [assembly: MelonInfo(typeof(SylphMage.Core), "SylphMage", "1.0.0", "jade", null)]
 [assembly: MelonGame("Perfectly Generic Team", "The Genesis Project")]
 
 namespace SylphMage
 {
+    
     public class Core : MelonMod
     {
         public bool coreupdate = false;
@@ -59,12 +59,12 @@ namespace SylphMage
                 try
                 {
                     String[] allfiles = Directory.GetFileSystemEntries(location);
-                    LoggerInstance.Msg("the folders are:");
-                    foreach (var file in allfiles)
-                    {
-                        LoggerInstance.Msg(file);
-
-                    }
+                    //LoggerInstance.Msg("the folders are:");
+                    //foreach (var file in allfiles)
+                    //{
+                    //    LoggerInstance.Msg(file);
+                    //
+                    //}
                     return allfiles;
                 }
                 catch (DirectoryNotFoundException)
@@ -79,9 +79,9 @@ namespace SylphMage
             {
                 foreach (var candidate in Folderlist)
                 {
-                    LoggerInstance.Msg("they are: " + candidate);
+                  //  LoggerInstance.Msg("they are: " + candidate);
                     String[] ModList = getFolders(candidate);
-                    LoggerInstance.MsgPastel("hiiii");
+                 //   LoggerInstance.MsgPastel("hiiii");
                     string SylphMageVesrion = "";
                     var modDirectory = new DirectoryInfo("./Mods/");
                     foreach (var file in modDirectory.EnumerateFiles( "SylphMage*"))
@@ -94,8 +94,8 @@ namespace SylphMage
                     }
                         foreach (var Uniquefolder in ModList)
                     {
-                        LoggerInstance.Msg("the uniquefolder is: " + Uniquefolder);
-                        LoggerInstance.Msg("the candidate is: " + candidate);
+                    //    LoggerInstance.Msg("the uniquefolder is: " + Uniquefolder);
+                     //   LoggerInstance.Msg("the candidate is: " + candidate);
                         if (Uniquefolder == candidate + "\\AssetBundles")
                         {
                             foreach (var secondCandidate in Directory.GetFileSystemEntries(Uniquefolder))
@@ -106,23 +106,23 @@ namespace SylphMage
                                 {
                                     try
                                     {
-                                        LoggerInstance.MsgPastel("Success :3");
+                                        LoggerInstance.MsgPastel("Found Mods :3");
 
                                         string symbolicLink = "./Mods";
                                         string filePath = secondCandidate;
                                         string fileName = secondCandidate.Substring(45);
-                                        LoggerInstance.Msg("the name of the directory is: " + fileName);
+                                       // LoggerInstance.Msg("the name of the directory is: " + fileName);
                                         foreach (var item in Directory.GetFileSystemEntries(secondCandidate))
                                         {
-                                            LoggerInstance.Msg("the item is: " + item.Substring(item.Length - 3));
+                                           // LoggerInstance.Msg("the item is: " + item.Substring(item.Length - 3));
                                             if (item.Substring(item.Length - 3) != "dll")
                                             {
                                                 string name = item.Remove(0, secondCandidate.Length + 1);
                                                 string version = name.Substring(name.Length - 5);
                                                 name = name.Remove(name.Length - 6, 6);
-                                                LoggerInstance.Msg("the version number is: " + version);
-                                                LoggerInstance.Msg("one is: " + "./Mods/" + name + ".dll");
-                                                LoggerInstance.Msg("two is: " + "./Mods/" + name + "." + version);
+                                             //   LoggerInstance.Msg("the version number is: " + version);
+                                             //   LoggerInstance.Msg("one is: " + "./Mods/" + name + ".dll");
+                                             //   LoggerInstance.Msg("two is: " + "./Mods/" + name + "." + version);
                                                 if (File.Exists("./Mods/" + name + ".dll") && !(File.Exists("./Mods/" + name + "." + version)))
                                                 {
                                                     try
@@ -162,8 +162,8 @@ namespace SylphMage
                                         foreach (var item in Directory.GetFileSystemEntries(secondCandidate))
                                         {
                                             string filename = item.Remove(0, 59);
-                                            LoggerInstance.Msg("item: " + item);
-                                            LoggerInstance.Msg("filename: " + filename);
+                                          //  LoggerInstance.Msg("item: " + item);
+                                         //   LoggerInstance.Msg("filename: " + filename);
                                             string name = filename.Remove(filename.Length - 4);
                                             if (filename == "SylphMage.dll" && !(File.Exists("./Mods/"+name+"."+SylphMageVesrion)))
                                             {
@@ -182,13 +182,18 @@ namespace SylphMage
                                     }
                                     catch
                                     {
-                                        LoggerInstance.Msg("IMPORTANT: Please screenshot this part of the console and send it to nova if you're seeing this; I done fucked up somehow");
+                                        LoggerInstance.Msg("bug that I don't want to fix right now");
                                     }
                                 }
                             }
                         }
                     }
                 }
+            }
+            Debug.Log("the contents of the melonloader Mods file are:");
+            foreach (var item in Directory.GetFileSystemEntries("./Mods"))
+            {
+                Debug.Log(item);
             }
         }
 
