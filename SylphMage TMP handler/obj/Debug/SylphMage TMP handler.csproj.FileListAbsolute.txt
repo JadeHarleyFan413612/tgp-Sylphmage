@@ -1,0 +1,15 @@
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\SylphMage TMP handler.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\SylphMage TMP handler.pdb
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\Assembly-CSharp.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\MelonLoader.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\UnityEngine.CoreModule.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\UnityEngine.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\UnityEngine.InputLegacyModule.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\UnityEngine.UI.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\0Harmony.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\bin\Debug\UnityEngine.InputModule.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\obj\Debug\SylphMage TMP handler.csproj.AssemblyReference.cache
+\\host.lan\Data\Vscode\SylphMage TMP handler\obj\Debug\SylphMage TMP handler.csproj.CoreCompileInputs.cache
+\\host.lan\Data\Vscode\SylphMage TMP handler\obj\Debug\SylphMage TMP handler.csproj.CopyComplete
+\\host.lan\Data\Vscode\SylphMage TMP handler\obj\Debug\SylphMage TMP handler.dll
+\\host.lan\Data\Vscode\SylphMage TMP handler\obj\Debug\SylphMage TMP handler.pdb
