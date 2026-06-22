@@ -15,8 +15,8 @@ well I mean I said so on the workshop page for this silly, but if you want a rec
 5. select "properties"
 6. select "installed files"
 7. select "browse" on the top right corner of the screen
-8. Put SylphMage.dll and SylphMage.x.x.x (where x.x.x is the version number) into the "Mods" folder
-9. subscribe to the sylphmage workshop mod
+8. Put [SylphMage.dll and SylphMage.x.x.x](https://github.com/JadeHarleyFan413612/tgp-Sylphmage/releases/tag/beta) (where x.x.x is the version number) into the "Mods" folder
+9. subscribe to the sylphmage workshop mod if it exists
 10. restart tgp :3
 
 # how do I use this to upload my melonloader mods to the TGP workshop?
