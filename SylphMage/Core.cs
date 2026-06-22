@@ -36,7 +36,7 @@ namespace SylphMage
         {
             GUIStyle novastyle = new GUIStyle();
             novastyle.richText = true;
-            GUI.Label(new Rect(150, 150, 300, 500), "<size=24><color=#0f0><b>One or more mods have been added :3c \n close tgp to apply the change</b></color></size>", novastyle);
+            GUI.Label(new Rect(150, 50, 300, 500), "<size=24><color=#0f0><b>One or more mods have been added :3c \n close tgp to apply the change</b></color></size>", novastyle);
         }
         //private static void CopyFilesRecursively(string sourcePath, string targetPath)
         //{
