@@ -1,15 +1,16 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using HarmonyLib;
+using MelonLoader;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using System.Xml.Linq;
 using UnityEngine;
-using MelonLoader;
-using HarmonyLib;
-using System.Collections;
-using System.Runtime.Remoting;
 
 [assembly: MelonInfo(typeof(SylphMage.Core), "SylphMage", "1.0.0", "jade", null)]
 [assembly: MelonGame("Perfectly Generic Team", "The Genesis Project")]
@@ -81,7 +82,17 @@ namespace SylphMage
                     LoggerInstance.Msg("they are: " + candidate);
                     String[] ModList = getFolders(candidate);
                     LoggerInstance.MsgPastel("hiiii");
-                    foreach (var Uniquefolder in ModList)
+                    string SylphMageVesrion = "";
+                    var modDirectory = new DirectoryInfo("./Mods/");
+                    foreach (var file in modDirectory.EnumerateFiles( "SylphMage*"))
+                    {
+                        if (file.FullName.Remove(0, file.FullName.Length - 3) != "dll")
+                        {
+                            SylphMageVesrion = file.FullName.Remove(0,file.FullName.Length - 5);
+                            LoggerInstance.Msg("sylphmage version is: " + SylphMageVesrion);
+                        }
+                    }
+                        foreach (var Uniquefolder in ModList)
                     {
                         LoggerInstance.Msg("the uniquefolder is: " + Uniquefolder);
                         LoggerInstance.Msg("the candidate is: " + candidate);
@@ -153,9 +164,10 @@ namespace SylphMage
                                             string filename = item.Remove(0, 59);
                                             LoggerInstance.Msg("item: " + item);
                                             LoggerInstance.Msg("filename: " + filename);
-                                            if (filename == "SylphMage.dll")
+                                            string name = filename.Remove(filename.Length - 4);
+                                            if (filename == "SylphMage.dll" && !(File.Exists("./Mods/"+name+"."+SylphMageVesrion)))
                                             {
-                                                LoggerInstance.Msg("sylphmage");
+                                                LoggerInstance.Msg(name+" : "+SylphMageVesrion);
                                                 File.Copy(item, "./Mods/TMP" + filename, true);
                                             }
                                             else
