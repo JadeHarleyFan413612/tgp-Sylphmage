@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = SylphMage
-build_property.ProjectDir = \\host.lan\Data\Vscode\gui\SylphMage\
+build_property.ProjectDir = \\host.lan\Data\Vscode\gui\SylphMage2\SylphMage\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

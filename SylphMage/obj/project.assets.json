@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\host.lan\\Data\\Vscode\\gui\\SylphMage\\SylphMage.csproj",
+      "projectUniqueName": "\\\\host.lan\\Data\\Vscode\\gui\\SylphMage2\\SylphMage\\SylphMage.csproj",
       "projectName": "SylphMage",
-      "projectPath": "\\\\host.lan\\Data\\Vscode\\gui\\SylphMage\\SylphMage.csproj",
+      "projectPath": "\\\\host.lan\\Data\\Vscode\\gui\\SylphMage2\\SylphMage\\SylphMage.csproj",
       "packagesPath": "C:\\Users\\jade\\.nuget\\packages\\",
-      "outputPath": "\\\\host.lan\\Data\\Vscode\\gui\\SylphMage\\obj\\",
+      "outputPath": "\\\\host.lan\\Data\\Vscode\\gui\\SylphMage2\\SylphMage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
