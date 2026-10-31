@@ -16,7 +16,7 @@ well I mean I said so on the workshop page for this silly, but if you want a rec
 6. (if you're on linux proton select "general" and paste `WINEDLLOVERRIDES="version=n,b" %command%` into the launch options)
 7. select "installed files"
 8. select "browse" on the top right corner of the screen
-9. Put [SylphMage.dll](https://github.com/JadeHarleyFan413612/tgp-Sylphmage/releases/tag/release) into the "Mods" folder
+9. Put [SylphMage.dll and SylphMageUpdateHandler.dll](https://github.com/JadeHarleyFan413612/tgp-Sylphmage/releases/tag/release) into the "Mods" folder
 10. subscribe to the sylphmage workshop mod [here](https://steamcommunity.com/sharedfiles/filedetails/?id=3750025727)
 11. restart tgp :3
 
